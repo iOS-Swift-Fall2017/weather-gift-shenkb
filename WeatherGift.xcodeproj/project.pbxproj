@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71686D81F952DC40081ECA3 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71686D71F952DC40081ECA3 /* PageVC.swift */; };
 		B7CECC841F9524040002A6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CECC831F9524040002A6CF /* AppDelegate.swift */; };
-		B7CECC861F9524040002A6CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CECC851F9524040002A6CF /* ViewController.swift */; };
 		B7CECC891F9524040002A6CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CECC871F9524040002A6CF /* Main.storyboard */; };
 		B7CECC8B1F9524040002A6CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CECC8A1F9524040002A6CF /* Assets.xcassets */; };
 		B7CECC8E1F9524040002A6CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CECC8C1F9524040002A6CF /* LaunchScreen.storyboard */; };
+		B7CECC961F9524E70002A6CF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CECC951F9524E70002A6CF /* DetailVC.swift */; };
+		B7CECC981F952A640002A6CF /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CECC971F952A640002A6CF /* ListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B71686D71F952DC40081ECA3 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		B7CECC801F9524040002A6CF /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CECC831F9524040002A6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7CECC851F9524040002A6CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7CECC881F9524040002A6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7CECC8A1F9524040002A6CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7CECC8D1F9524040002A6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7CECC8F1F9524040002A6CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7CECC951F9524E70002A6CF /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		B7CECC971F952A640002A6CF /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				B7CECC831F9524040002A6CF /* AppDelegate.swift */,
-				B7CECC851F9524040002A6CF /* ViewController.swift */,
+				B71686D71F952DC40081ECA3 /* PageVC.swift */,
+				B7CECC951F9524E70002A6CF /* DetailVC.swift */,
+				B7CECC971F952A640002A6CF /* ListVC.swift */,
 				B7CECC871F9524040002A6CF /* Main.storyboard */,
 				B7CECC8A1F9524040002A6CF /* Assets.xcassets */,
 				B7CECC8C1F9524040002A6CF /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7CECC861F9524040002A6CF /* ViewController.swift in Sources */,
+				B7CECC981F952A640002A6CF /* ListVC.swift in Sources */,
+				B71686D81F952DC40081ECA3 /* PageVC.swift in Sources */,
 				B7CECC841F9524040002A6CF /* AppDelegate.swift in Sources */,
+				B7CECC961F9524E70002A6CF /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M92AACH4S;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kaining.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M92AACH4S;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kaining.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
