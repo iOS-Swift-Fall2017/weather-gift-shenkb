@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app will need access to your location to autmatically find local wealther.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app will need access to your location to autmatically find local wealther.</string>
 </dict>
 </plist>
