@@ -25,7 +25,11 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUserIntergace()
+        if currentPage != 0 {
+            self.locationsArray[currentPage].getWeather {
+                self.updateUserIntergace()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +41,7 @@ class DetailVC: UIViewController {
     func updateUserIntergace() {
         locationLabel.text = locationsArray[currentPage].name
         dateLabel.text = locationsArray[currentPage].coordinates
+        temperatureLabel.text = locationsArray[currentPage].currentTemp
     }
 }
 extension DetailVC: CLLocationManagerDelegate {
@@ -44,8 +49,6 @@ extension DetailVC: CLLocationManagerDelegate {
     func getLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        let status = CLLocationManager.authorizationStatus()
-        handleLocationAuthorizationStatus(status: status)
     }
     
     func handleLocationAuthorizationStatus(status: CLAuthorizationStatus) {
@@ -73,7 +76,6 @@ extension DetailVC: CLLocationManagerDelegate {
         let currentLatitude = currentLocation.coordinate.latitude
         let currentLongitude = currentLocation.coordinate.longitude
         let currentCoordinates = "\(currentLatitude),\(currentLongitude)"
-        print(currentCoordinates)
         dateLabel.text = currentCoordinates
         geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: {
             placemarks, error in
@@ -86,8 +88,9 @@ extension DetailVC: CLLocationManagerDelegate {
             }
             self.locationsArray[0].name = place
             self.locationsArray[0].coordinates = currentCoordinates
-            self.locationsArray[0].getWeather()
-            self.updateUserIntergace()
+            self.locationsArray[0].getWeather {
+                self.updateUserIntergace()
+            }
         })
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
