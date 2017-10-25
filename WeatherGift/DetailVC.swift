@@ -42,6 +42,7 @@ class DetailVC: UIViewController {
         locationLabel.text = locationsArray[currentPage].name
         dateLabel.text = locationsArray[currentPage].coordinates
         temperatureLabel.text = locationsArray[currentPage].currentTemp
+        summaryLabel.text = locationsArray[currentPage].currentSummary
     }
 }
 extension DetailVC: CLLocationManagerDelegate {
