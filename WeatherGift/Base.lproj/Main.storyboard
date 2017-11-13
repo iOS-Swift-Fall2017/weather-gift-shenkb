@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -218,7 +219,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="137" y="164"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="Grp-RM-VYt">
+            <objects>
+                <viewController id="kJ1-Ub-S3K" customClass="AboutVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gbh-cO-8RF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNQ-gJ-oNS">
+                                <rect key="frame" x="16" y="630" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jra-rx-b6P"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="kJ1-Ub-S3K" eventType="touchUpInside" id="KpM-y5-bID"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeatherGift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGW-TQ-B0M">
+                                <rect key="frame" x="16" y="48" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NLx-83-KA2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KainingS" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-SE-AWT">
+                                <rect key="frame" x="16" y="100" width="343" height="316"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love for just for you by Kaining Shen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-ID-scl">
+                                <rect key="frame" x="16" y="424" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="k0M-oS-f2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkSky" translatesAutoresizingMaskIntoConstraints="NO" id="Mvg-dk-bEj">
+                                <rect key="frame" x="16" y="495" width="122" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="AL8-gP-Ihf"/>
+                                    <constraint firstAttribute="height" constant="71" id="RDV-IA-Lkz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="WWd-oE-hG8">
+                                <rect key="frame" x="146" y="492" width="213" height="71"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MGW-TQ-B0M" firstAttribute="trailing" secondItem="gbh-cO-8RF" secondAttribute="trailingMargin" id="0VI-9a-X7F"/>
+                            <constraint firstItem="cBg-SE-AWT" firstAttribute="leading" secondItem="gi4-ID-scl" secondAttribute="leading" id="60a-Uq-Sa2"/>
+                            <constraint firstItem="MGW-TQ-B0M" firstAttribute="trailing" secondItem="cBg-SE-AWT" secondAttribute="trailing" id="7zZ-Fe-d5f"/>
+                            <constraint firstItem="WWd-oE-hG8" firstAttribute="top" secondItem="gi4-ID-scl" secondAttribute="bottom" constant="8" symbolic="YES" id="A6O-XG-n0H"/>
+                            <constraint firstItem="MGW-TQ-B0M" firstAttribute="leading" secondItem="cBg-SE-AWT" secondAttribute="leading" id="JdK-k8-g0G"/>
+                            <constraint firstItem="MGW-TQ-B0M" firstAttribute="leading" secondItem="gbh-cO-8RF" secondAttribute="leadingMargin" id="TwU-az-z0t"/>
+                            <constraint firstItem="cBg-SE-AWT" firstAttribute="trailing" secondItem="gi4-ID-scl" secondAttribute="trailing" id="W8x-zP-DkY"/>
+                            <constraint firstItem="WWd-oE-hG8" firstAttribute="leading" secondItem="Mvg-dk-bEj" secondAttribute="trailing" constant="8" symbolic="YES" id="ZWC-SB-vhh"/>
+                            <constraint firstItem="Mvg-dk-bEj" firstAttribute="leading" secondItem="rNQ-gJ-oNS" secondAttribute="leading" id="dbJ-jn-sZB"/>
+                            <constraint firstItem="gi4-ID-scl" firstAttribute="leading" secondItem="Mvg-dk-bEj" secondAttribute="leading" id="doa-Jn-siH"/>
+                            <constraint firstItem="Mvg-dk-bEj" firstAttribute="top" secondItem="gi4-ID-scl" secondAttribute="bottom" constant="11" id="feb-oE-Hvr"/>
+                            <constraint firstItem="gi4-ID-scl" firstAttribute="trailing" secondItem="WWd-oE-hG8" secondAttribute="trailing" id="ioK-EW-Mg4"/>
+                            <constraint firstItem="9Fs-ol-DxM" firstAttribute="bottom" secondItem="rNQ-gJ-oNS" secondAttribute="bottom" constant="7" id="lP1-4K-8l5"/>
+                            <constraint firstItem="MGW-TQ-B0M" firstAttribute="top" secondItem="9Fs-ol-DxM" secondAttribute="top" constant="28" id="mFm-tP-xL8"/>
+                            <constraint firstItem="gi4-ID-scl" firstAttribute="top" secondItem="cBg-SE-AWT" secondAttribute="bottom" constant="8" symbolic="YES" id="o1u-5n-PqW"/>
+                            <constraint firstItem="cBg-SE-AWT" firstAttribute="top" secondItem="MGW-TQ-B0M" secondAttribute="bottom" constant="8" symbolic="YES" id="qcC-9h-9M3"/>
+                            <constraint firstItem="9Fs-ol-DxM" firstAttribute="bottom" secondItem="WWd-oE-hG8" secondAttribute="bottom" constant="104" id="sbr-J0-4kM"/>
+                            <constraint firstItem="rNQ-gJ-oNS" firstAttribute="top" secondItem="Mvg-dk-bEj" secondAttribute="bottom" constant="64" id="ykx-GW-HAz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Fs-ol-DxM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBm-ib-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="163"/>
         </scene>
         <!--PageVC-->
         <scene sceneID="aEt-jf-UMA">
@@ -226,6 +305,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="F3d-92-Ivu" customClass="PageVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="MVR-Lx-kb0" kind="presentation" identifier="ToListVC" id="Cxp-MW-Cst"/>
+                        <segue destination="kJ1-Ub-S3K" kind="presentation" identifier="ToAboutVC" id="DOs-Cs-1l3"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79c-b8-E3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,7 +379,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="KainingS" width="2320" height="2320"/>
         <image name="clear-day" width="384" height="384"/>
+        <image name="darkSky" width="1904" height="759"/>
+        <image name="google" width="144" height="18"/>
         <image name="raindrop" width="18" height="20"/>
         <image name="small-clear-day" width="384" height="384"/>
     </resources>
